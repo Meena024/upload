@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+    <form id="myForm" class="myFormClass" style="text-align: center; background-color: darkgray;">
+        <br><label>Enter a value</label><br><br>
+        <input type="text" id="myInput" placeholder="Enter a value">
+        <br><br><button type="submit" id="myButton" style="background: gray;">Submit</button>
+        <br><br>
+    </form>
+    <script>
+        const input = document.getElementById('myInput');
+        const button = document.getElementById('myButton');
+        button.addEventListener('click', function() {
+            console.log('Clicked!');  
+            document.getElementById('myForm').style="background: cyan; text-align: right"
+            event.preventDefault(); 
+            const value = input.value.trim(); 
+            (value === '')?console.log('Value is empty. Please enter a value.'):console.log('Value:', value);
+        });
+        button.addEventListener('mouseover', function() {
+            console.log('Mouseover!');
+        });
+        button.addEventListener('mouseout', function() {
+            console.log('Mouseout!');
+        });
+    </script>
+</body>
+</html>
