@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form input attributes</title>
+    </head>
+    <body>
+        <fieldset>
+            <form>
+                <label for="fname">Basic:</label>
+                <input type="text" id="fname" name="fname" value="Editable"><br><br>
+                <label for="lname">Readonly:</label>
+                <input type="text" id="lname" name="lname" value="Non editable-readonly" readonly><br><br>
+                <label for="fname">Disabled:</label>
+                <input type="text" id="fname" name="fname" value="Disabled" disabled><br><br>
+                <label for="pin">Text box with size 4:</label>
+                <input type="text" id="pin" name="pin" size="4"><br><br>
+                <label for="pin">Maxlength(can take only 4 characters):</label>
+                <input type="text" id="pin" name="pin" maxlength="4" size="4"><br><br>
+                <label for="datemax">Enter a date before 1980-01-01:</label>
+                <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+                <label for="datemin">Enter a date after 2000-01-01:</label>
+                <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+                <label for="quantity">Quantity (between 1 and 5):</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="5"><br><br>
+                <label for="files">Select files:</label>
+                <input type="file" id="files" name="files" multiple><br><br>
+                <label for="country_code">Country code:</label>
+                <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"><br><br>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="points">Step Attribute 3:</label>
+                <input type="number" id="points" name="points" step="3" value="5"><br><br>
+                <label for="fname">Autofocus:</label>
+                <input type="text" id="fname" name="fname" autofocus><br><br>
+                <input type="image" src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/1741250.jpg"  width="250" height="170"><br><br>
+                <label></label>
+                <input list="browsers">
+                <datalist id="browsers">
+                    <option value="Edge">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+                </datalist><br><br>
+                <input type="submit" value="SUBMIT">
+                <input type="reset" value="RESET">
+            </form><br>
+            <fieldset><form autocomplete="on">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="off"><br><br>
+                <input type="submit" value="Submit">
+            </form></fieldset><br>
+            <fieldset><form action="/action_page.php" id="form1">
+                <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <input type="submit" value="Submit">
+            </form><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" form="form1"></fieldset>
+        </fieldset>
+    </body>
+</html>
